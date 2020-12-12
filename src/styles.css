@@ -8,6 +8,9 @@ width: 50vw;
 height:20vh;
 padding: 0.5rem;
 box-sizing: border-box;
+border-radius: 1rem;
+border:1px solid black;
+
 
 }
 .btnCheck{
@@ -23,7 +26,8 @@ height: 20vh;
 border: 1px solid black;
 margin: auto;
 /* padding: 1rem; */
-box-sizing: border-box
+box-sizing: border-box;
+border-radius:1rem;
 }
 .outputDiv p{
 margin: 0;
