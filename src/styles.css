@@ -1,0 +1,31 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 5rem;
+}
+.inputBox{
+width: 50vw;
+height:20vh;
+padding: 0.5rem;
+box-sizing: border-box;
+
+}
+.btnCheck{
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  margin: 1rem 0 1rem 0;
+  border: none;
+  background-color: blueviolet;
+}
+.outputDiv{
+width: 50vw;
+height: 20vh;
+border: 1px solid black;
+margin: auto;
+/* padding: 1rem; */
+box-sizing: border-box
+}
+.outputDiv p{
+margin: 0;
+padding:1rem 0rem;
+}
