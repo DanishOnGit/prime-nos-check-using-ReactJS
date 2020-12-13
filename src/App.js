@@ -15,20 +15,26 @@ export default function App() {
   }
 
   function btnClickHandler(){
-   
-     var userDob=userInput.split("/")
+    var userDob;
+
+    if(userDob===null){
+      var newresult="please enter DOB first"
+      setResult(newresult)
+    } else{
+
+      var userDob=userInput.split("/")
      var date= userDob[0]
      var month=userDob[1]   
    console.log(date,month);
-   if(userDob==""){
-     var newresult="please enter DOB first"
-     setResult(newresult)
-   }
-   else if(isNaN(date)||isNaN(month)){
+   
+    if(isNaN(date)||isNaN(month)){
       var newresult="invalid input"
       setResult(newresult)
    }else if(date<=0||date>31||month<=0||month>12){
      var newresult="invalid input "
+     setResult(newresult)
+   }else if(!Number.isInteger(Number(date)) || !Number.isInteger(Number(month))){
+     var newresult="invalid input"
      setResult(newresult)
    }
    
@@ -54,6 +60,9 @@ export default function App() {
  }}
    
   }
+
+    }
+     
   
   
 
