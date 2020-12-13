@@ -8,20 +8,15 @@ export default function App() {
   const[result,setResult]=useState('')
 
 
-
   function onChangeHandler(){
     userInput=event.target.value;
-   console.log(userInput)
    
-  
-   
-  
   }
 
   function btnClickHandler(){
      
     if(!userInput){
-      var newresult="please enter DOB first"
+      var newresult="please enter DOB "
       setResult(newresult)
     } 
       else {
@@ -29,7 +24,7 @@ export default function App() {
       var userDob=userInput.split("/")
      var date= userDob[0]
      var month=userDob[1]   
-   console.log(date,month);
+   
    
     if(isNaN(date)||isNaN(month)){
       var newresult="invalid input"
