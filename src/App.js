@@ -16,18 +16,24 @@ export default function App() {
 
   function btnClickHandler(){
    
-      userDob=userInput.split("/")
-      date= userDob[0]
-      month=userDob[1]   
+     var userDob=userInput.split("/")
+     var date= userDob[0]
+     var month=userDob[1]   
    console.log(date,month);
-   if(isNaN(date)||isNaN(month)){
+   if(userDob==""){
+     var newresult="please enter DOB first"
+     setResult(newresult)
+   }
+   else if(isNaN(date)||isNaN(month)){
       var newresult="invalid input"
       setResult(newresult)
-   }else if(date<=0||date>31||month<=0||month>31){
+   }else if(date<=0||date>31||month<=0||month>12){
      var newresult="invalid input "
      setResult(newresult)
    }
-   if(date==1){
+   
+   else {
+     if(date==1){
     var newresult="Birth date neither prime nor composite"
     setResult(newresult)
  }
@@ -45,7 +51,7 @@ export default function App() {
       setResult(newresult)
     }
    }
- }
+ }}
    
   }
   
@@ -54,7 +60,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <input onChange={onChangeHandler} className="inputBox" placeholder="Enter your DOB in DD/MM format"/>
+      <h2>I can tell if your DOB is a prime number !</h2>
+      <input onChange={onChangeHandler} className="inputBox" placeholder="Enter DOB in DD/MM format"/>
       <br/>
       <button onClick={btnClickHandler} className="btnCheck">Check </button>
       <div className="outputDiv">
