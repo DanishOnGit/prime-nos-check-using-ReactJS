@@ -62,10 +62,6 @@ export default function App() {
 
     }
      
-  
-  
-
-
   return (
     <div className="App">
       <h2>I can tell if your DOB is a prime number !</h2>
