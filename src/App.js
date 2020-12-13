@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-
+var userInput;
 
 
 export default function App() {
@@ -10,18 +10,22 @@ export default function App() {
 
 
   function onChangeHandler(){
-  userInput=event.target.value
+    userInput=event.target.value;
+   console.log(userInput)
+   
+  
+   
   
   }
 
   function btnClickHandler(){
-    var userDob;
-
-    if(userDob===null){
+     
+    if(!userInput){
       var newresult="please enter DOB first"
       setResult(newresult)
-    } else{
-
+    } 
+      else {
+       
       var userDob=userInput.split("/")
      var date= userDob[0]
      var month=userDob[1]   
