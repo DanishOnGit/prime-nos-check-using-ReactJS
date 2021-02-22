@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 
-var userInput;
+let userInput;
 
 
 export default function App() {
@@ -16,24 +16,24 @@ export default function App() {
   function btnClickHandler(){
      
     if(!userInput){
-      var newresult="please enter DOB "
+     let newresult="please enter DOB "
       setResult(newresult)
     } 
       else {
        
-      var userDob=userInput.split("/")
-     var date= userDob[0]
-     var month=userDob[1]   
+      let userDob=userInput.split("/")
+     let date= userDob[0]
+     let month=userDob[1]   
    
    
     if(isNaN(date)||isNaN(month)){
-      var newresult="invalid input"
+      let newresult="invalid input"
       setResult(newresult)
    }else if(date<=0||date>31||month<=0||month>12){
-     var newresult="invalid input "
+     let newresult="invalid input "
      setResult(newresult)
    }else if(!Number.isInteger(Number(date)) || !Number.isInteger(Number(month))){
-     var newresult="invalid input"
+     let newresult="invalid input"
      setResult(newresult)
    }
    
@@ -43,16 +43,16 @@ export default function App() {
     setResult(newresult)
  }
  if(date==2){
-  var newresult="Birth date is prime number"
+ let newresult="Birth date is prime number"
   setResult(newresult)
 } else{
-   for(var i=2;i<date;i++){
+   for(let i=2;i<date;i++){
     if(date%i==0){
-      var newresult="Birth date is not prime number"
+      let newresult="Birth date is not prime number"
       setResult(newresult)
       break;
     }else{
-      var newresult="Birth date is prime number"
+     let newresult="Birth date is prime number"
       setResult(newresult)
     }
    }
